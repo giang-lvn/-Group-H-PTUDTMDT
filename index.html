@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .navigation{
+            display: flex;
+            padding: 18px 8px;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            background: #D9D9D9;
+        }
+
+        .navigation-logo{
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .navigation-menu{
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .login-button{
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .hero-content{
+            display: flex;
+            height: 380px;
+            padding: 0 120px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 52px;
+            align-self: stretch;
+            background: #F2ACAC;
+        }
+
+        .hero-content h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .hero-content p{
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            color: #000;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .hero-content button{
+            flex-shrink: 0;
+            background: #D9D9D9;
+        }
+
+        .gallery{
+            display: flex;
+            padding-bottom: 30px;
+            flex-direction: column;
+            align-items: center;
+            align-self: stretch;
+        }
+
+        .about-content{
+            background: #A3C8A1;
+        }
+
+        .gallery h1{
+            display: flex;
+            padding: 30px 0;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .gallery .content-images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 63px;
+            align-self: stretch;
+        }
+
+        .gallery .content-images .placeholder{
+            width: 300px;
+            height: 200px;
+            background: #D9D9D9;
+        }
+
+        .featured-content{
+            background: #5399A1;
+            gap: 85px;
+        }
+
+        .testimonials-content{
+            display: flex;
+            height: 614px;
+            flex-direction: column;
+            align-items: center;
+            gap: 79px;
+            align-self: stretch;
+            background: #7FB3EE;
+        }
+
+        .testimonials-content h1{
+            display: flex;
+            padding-top: 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .testimonials-content .testimonials-content-images{
+            display: flex;
+            height: 432px;
+            justify-content: center;
+            align-items: center;
+            gap: 138px;
+            flex-shrink: 0;
+            align-self: stretch;
+        }
+
+        .testimonials-content .testimonials-content-images .placeholder{
+            display: flex;
+            width: 265px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 29px;
+        }
+
+        .testimonials-content .testimonials-content-images .placeholder .image-placeholder{
+            height: 220px;
+            align-self: stretch;
+            background: #D9D9D9;
+        }
+
+        .testimonials-content .testimonials-content-images .placeholder .text-placeholder{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            align-self: stretch;
+        }
+
+        .testimonials-content .testimonials-content-images .placeholder .text-placeholder h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .testimonials-content .testimonials-content-images .placeholder .text-placeholder p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            flex: 1 0 0;
+        }
+
+        .footer-content{
+            display: flex;
+            height: 200px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            background: rgba(129, 123, 123, 0.47);
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="navigation-logo">Name + Logo</div>
+        <div class="navigation-menu">Navigation Menu</div>
+        <div class="login-button">Login/Signup</div>
+    </div>
+    <section class="hero-content">
+            <h1>BANNER</h1>
+            <p>Lorem ipsum dolor sit amet consectetur. Pharetra gravida in quis auctor massa. Feugiat proin amet est adipiscing pharetra dui sociis sed velit. Gravida in justo scelerisque ultricies vulputate. Vitae viverra quis purus nulla suscipit porttitor a vulputate aliquam.</p>
+            <button>Get Started</button>
+    </section>
+    <section class="gallery about-content">
+        <h1>About us</h1>
+    <div class="content-images">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+    </div>
+    </section>
+    <section class="gallery featured-content">
+        <h1>Featured Category</h1>
+    <div class="content-images">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+    </div>
+    </section>
+    <section class="testimonials-content">
+        <h1>Testimonials</h1>
+    <div class="testimonials-content-images">
+        <div class="placeholder">
+            <div class="image-placeholder"></div>
+            <div class="text-placeholder">
+                <h2>Mr. Nguyen Van A</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="placeholder">
+            <div class="image-placeholder"></div>
+            <div class="text-placeholder">
+                <h2>Mr. Nguyen Van A</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="placeholder">
+            <div class="image-placeholder"></div>
+            <div class="text-placeholder">
+                <h2>Mr. Nguyen Van A</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-content">Footer</footer>
+</body>
+</html>
