@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -145,8 +145,8 @@
           <div class="form-row">
             <label><strong>Gender</strong></label>
             <div class="gender-group">
-              <label><input type="radio" name="gender" value="Nam"> Male</label>
-              <label><input type="radio" name="gender" value="Nữ"> Female</label>
+              <label><input type="radio" name="gender" value="Male"> Male</label>
+              <label><input type="radio" name="gender" value="Female"> Female</label>
             </div>
           </div>
           <div class="form-row">
@@ -166,7 +166,7 @@
 
         <div class="address-list">
           <div class="address-box">
-            <p><strong>Địa chỉ:</strong> 123 Nguyễn Văn Cừ, Quận 5, TP.HCM <span class="default-label" style="color:#d32f2f; font-weight:600;"></span></p>
+            <p><strong>Địa chỉ:</strong> 123 Nguyen Van Cu Street, District 5, Ho Chi Minh City <span class="default-label" style="color:#d32f2f; font-weight:600;"></span></p>
             <div class="address-actions">
               <button class="update-btn">Update</button>
               <button class="default-btn">Set Default</button>
@@ -185,7 +185,7 @@
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" width="22" alt="Tiktok"></a>
     </div>
     <p style="margin-top:12px; color:#555;">📞 <a href="tel:0123456789">0123 456 789</a> | ✉️ <a href="mailto:lienhe@shoptho.vn">lienhe@shoptho.vn</a></p>
-    <p style="margin-top:8px; color:#666;">© 2025 ShopThơ. All rights reserved.</p>
+    <p style="margin-top:8px; color:#666;">© 2025 ShopTho. All rights reserved.</p>
   </footer>
 
   <script>
@@ -212,7 +212,7 @@
     const addAddressBtn = document.querySelector(".add-address");
 
     addAddressBtn.addEventListener("click", () => {
-      const newAddress = prompt("Nhập địa chỉ mới:");
+      const newAddress = prompt("Add new address:");
       if (newAddress && newAddress.trim() !== "") {
         const box = document.createElement("div");
         box.classList.add("address-box");
@@ -233,7 +233,7 @@
       btn.addEventListener("click", () => {
         document.querySelectorAll(".default-label").forEach(label => label.textContent = "");
         const label = box.querySelector(".default-label");
-        label.textContent = "(Mặc định)";
+        label.textContent = "(Default)";
       });
     }
 
@@ -242,3 +242,4 @@
   </script>
 </body>
 </html>
+
