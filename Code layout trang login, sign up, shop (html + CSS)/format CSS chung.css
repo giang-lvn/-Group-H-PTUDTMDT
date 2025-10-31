@@ -1,0 +1,77 @@
+/* QUY ĐỊNH CSS CHUNG TỪ TÀI LIỆU */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* cite: 5 */
+}
+
+body{
+    font-family: 'Arial', sans-serif; /* cite: 8 */
+    font-size: 16px; /* cite: 9 */
+    line-height: 1.5; /* cite: 10 */
+    color: #333; /* cite: 11 */
+    background-color: #fff; /* cite: 12 */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography Rules */
+h1, .h1-text { font-size: 60px; } /* cite: 73 */
+h2, .h2-text { font-size: 30px; } /* cite: 76 */
+p, .h3-text { font-size: 20px; } /* cite: 79 */
+
+/* Navigation Styles [cite: 21-70] */
+.navigation{
+    display: flex;
+    padding: 18px 8px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    background: #D9D9D9;
+}
+
+.navigation-logo, .navigation-menu, .login-button{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* Footer Styles [cite: 83-100] */
+.footer-content{
+    display: flex;
+    height: 200px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    background: rgba(129, 123, 123, 0.47);
+    color: #000;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    width: 100%;
+    margin-top: auto; /* Cho phép nội dung chính đẩy footer xuống cuối trang */
+}
+
+/* Button Color Rule [cite: 80] */
+.confirm-button, .add-to-cart-button {
+    background-color: #D96D6D;
+}
+
+/* RESPONSIVENESS CHUNG */
+@media (max-width: 1024px) {
+    .navigation { flex-direction: column; padding-top: 15px; padding-bottom: 15px; }
+    .navigation-menu, .login-button { margin-top: 10px; font-size: 20px; }
+}
+@media (max-width: 640px) {
+    .navigation-logo, .navigation-menu, .login-button { font-size: 20px; }
+    .footer-content { font-size: 30px; }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Ký</title>
+    <link rel="stylesheet" href="Trang sign up (CSS).css">
+    <link rel="stylesheet" href="format CSS chung.css">
+</head>
+<body>
+
+    <header class="navigation">
+        <div class="navigation-logo">TÊN/LOGO WEBSITE</div>
+        <div class="navigation-menu">Navigation Menu</div>
+        <div class="login-button">Login/Signup</div>
+    </header>
+
+    <div class="main-content-signup">
+        <div class="signup-box-wrapper">
+            
+            <div class="signup-header">
+                <h1 class="signup-title h1-text">Sign up</h1>
+                <p class="signup-subtitle h3-text">Đăng ký tài khoản của bạn (câu này có thể thay lại)</p>
+            </div>
+            
+            <form class="signup-form-area" action="#" method="POST">
+                
+                <input type="text" 
+                       class="input-field" 
+                       placeholder="Tên người dùng/Email/Số điện thoại" 
+                       name="username_email_phone"
+                       required>
+                
+                <input type="password" 
+                       class="input-field" 
+                       placeholder="Mật khẩu" 
+                       name="password"
+                       required>
+
+                <input type="password" 
+                       class="input-field" 
+                       placeholder="Xác nhận lại mật khẩu" 
+                       name="confirm_password"
+                       required>
+
+                <input type="tel" 
+                       class="input-field" 
+                       placeholder="Số điện thoại (xác nhận qua SMS)" 
+                       name="phone_number"
+                       required>
+                
+            </form>
+
+            <button type="submit" class="confirm-button h2-text">Xác nhận</button>
+
+            <p class="social-signup-text h3-text">Hoặc thử đăng ký bằng phương pháp</p>
+            
+            <div class="social-signup-buttons">
+                
+                <a href="#" class="social-button h3-text">
+                    <span class="logo-placeholder">📘</span>
+                    <span>Logo Facebook</span>
+                </a>
+                
+                <a href="#" class="social-button h3-text">
+                    <span class="logo-placeholder">G</span>
+                    <span>Logo Google</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer class="footer-content">FOOTER</footer>
+
+</body>
+</html>

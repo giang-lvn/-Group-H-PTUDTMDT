@@ -1,0 +1,86 @@
+/* QUY ĐỊNH CSS CHUNG TỪ TÀI LIỆU */
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ font-family: 'Arial', sans-serif; font-size: 16px; line-height: 1.5; color: #333; background-color: #fff; min-height: 100vh; display: flex; flex-direction: column; }
+h1, .h1-text { font-size: 60px; } /* cite: 73 */
+h2, .h2-text { font-size: 30px; } /* cite: 76 */
+p, .h3-text { font-size: 20px; } /* cite: 79 */
+.navigation{ display: flex; padding: 18px 8px; justify-content: space-between; align-items: center; align-self: stretch; background: #D9D9D9; }
+.navigation-logo, .navigation-menu, .login-button{ display: flex; padding: 10px; justify-content: center; align-items: center; gap: 10px; color: #000; text-align: center; font-size: 25px; font-weight: 400; }
+.footer-content{ display: flex; height: 200px; padding: 10px; justify-content: center; align-items: center; gap: 10px; align-self: stretch; background: rgba(129, 123, 123, 0.47); color: #000; text-align: center; font-size: 60px; font-weight: 400; width: 100%; margin-top: 45px; } /* [cite: 86] */
+.add-to-cart-button { background-color: #D96D6D; } /* cite: 80 */
+@media (max-width: 1024px) { .navigation { flex-direction: column; padding-top: 15px; padding-bottom: 15px; } .navigation-menu, .login-button { margin-top: 10px; font-size: 20px; } }
+@media (max-width: 640px) { .navigation-logo, .navigation-menu, .login-button { font-size: 20px; } .footer-content { font-size: 30px; } }
+
+/* CSS RIÊNG CỦA TRANG SHOP */
+.main-content { padding: 40px 5%; max-width: 1400px; margin: 0 auto; width: 100%; }
+.search-bar {
+    width: 100%; max-width: 959px; margin: 0 auto; height: 61px; background-color: #D9D9D9;
+    border-radius: 1000px; display: flex; align-items: center; padding: 0 20px; margin-bottom: 30px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+.search-bar input { flex-grow: 1; background: none; border: none; outline: none; padding: 0 10px; font-size: 16px; font-family: inherit; color: #4C4C4C; }
+.search-icon { color: black; margin-right: 10px; }
+.tags-container { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 50px; }
+.tag-button {
+    background-color: #626161; color: white; font-weight: 700; padding: 8px 20px; border-radius: 5px;
+    cursor: pointer; transition: background-color 0.2s; height: 43px; border: none;
+}
+.tag-button:hover { background-color: #4b4a4a; }
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;
+    justify-content: center; margin-bottom: 60px;
+}
+.product-card {
+    background-color: #D9D9D9; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; flex-direction: column; align-items: center;
+}
+.product-image-box { width: 90%; height: auto; max-width: 266px; margin-bottom: 15px; padding: 10px; background-color: white; }
+.product-image { width: 100%; height: auto; display: block; }
+.product-name { font-weight: 400; color: black; margin-bottom: 5px; }
+.product-attribute { font-size: 17px; font-weight: 400; color: #626161; margin-bottom: 15px; }
+.product-price-qty { display: flex; justify-content: space-between; align-items: center; width: 80%; max-width: 250px; margin-bottom: 20px; }
+.product-price { font-weight: 700; color: black; }
+.qty-control { font-size: 19px; font-weight: 400; color: black; display: flex; align-items: center; gap: 15px; }
+.qty-button { cursor: pointer; font-weight: 700; font-size: 22px; padding: 0 5px; }
+.add-to-cart-button {
+    width: 90%; max-width: 271px; height: 50px; color: white; font-weight: 700; border: none;
+    cursor: pointer; transition: background-color 0.2s; margin-top: 10px;
+}
+.add-to-cart-button:hover { background-color: #c05f5f; }
+
+/* PAGINATION */
+.pagination { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 20px; margin-bottom: 60px; }
+.page-link { color: black; font-style: italic; font-weight: 400; cursor: pointer; text-decoration: none; transition: color 0.2s; }
+.page-link:hover, .page-link.active { color: #D96D6D; font-weight: 700; }
+
+/* SUBSCRIPTION BOX */
+.subscription-box {
+    background: #F0D8D8; border-radius: 30px; padding: 40px 20px; text-align: center;
+    max-width: 1440px; margin: 0 auto 60px auto;
+}
+.subscription-title { font-weight: 400; color: black; margin-bottom: 10px; }
+.subscription-description { font-weight: 400; color: black; margin-bottom: 30px; }
+.subscription-form { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding: 0 5%; }
+.subscription-input { width: 300px; height: 50px; background: #CEC2C2; border-radius: 10px; border: none; padding: 0 20px; text-align: center; }
+.subscription-submit {
+    width: 100px; height: 40px; background: #C05F5F; border-radius: 20px; color: #FBEFEF;
+    font-size: 20px; font-weight: 700; border: none; cursor: pointer; transition: background-color 0.2s;
+}
+.subscription-submit:hover { background-color: #a34e4e; }
+
+/* RESPONSIVENESS (Shop Specific) */
+@media (max-width: 1024px) {
+    .product-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .subscription-title { font-size: 40px; }
+    .subscription-description { font-size: 20px; }
+    .subscription-form { flex-direction: column; gap: 15px; }
+    .subscription-input { width: 80%; max-width: 350px; }
+}
+@media (max-width: 640px) {
+    .product-grid { grid-template-columns: 1fr; gap: 20px; }
+    .main-content { padding: 20px 3%; }
+    .tags-container { justify-content: space-between; gap: 8px; }
+    .tag-button { font-size: 14px; padding: 6px 10px; }
+}
