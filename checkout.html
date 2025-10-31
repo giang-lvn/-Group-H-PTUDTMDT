@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout</title>
+        <link rel="stylesheet" type="text/css" href="CSS/checkout.css">
+    </head>
+
+    <body>
+        <div class="navigation">
+            <div class="navigation-logo">Name + Logo</div>
+            <div class="navigation-menu">Navigation Menu</div>
+            <div class="login-button">Login/Signup</div>
+        </div>
+
+
+        <main>
+            <!-- phần điền form ttin cá nhân + địa chỉ + pthuc thanh toán -->
+            <section class="checkout-form">
+                <h1>CHECK OUT</h1>
+
+                <!-- thông tin cá nhân -->
+                <div class="section-title">Customer information</div>
+                <div class="form-group">
+                    <input type="text" placeholder="First name">
+                    <input type="text" placeholder="Last name">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Phone number">
+                </div>
+
+                <!-- địa chỉ -->
+                <div class="section-title">Shipping address</div>
+                <div class="form-group">
+                    <input type="text" placeholder="Street address">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="State / Province">
+                    <input type="text" placeholder="ZIP / Postal code">
+                    <input type="text" placeholder="Country">
+                </div>
+
+                <!-- thanh toán -->
+                <div class="section-title">Payment method</div>
+                <!-- lựa chọn phương thức -->
+                <div class="payment-options">
+                    <label><input type="radio" name="payment"> Master Card</label>
+                    <label><input type="radio" name="payment"> Visa</label>
+                    <label><input type="radio" name="payment"> PayPal</label>
+                </div>
+                <!-- điền thông tin -->
+                <div class="form-group">
+                    <input type="text" placeholder="Cardholder name">
+                    <input type="text" placeholder="Card number">
+                    <input type="text" placeholder="Expiry date">
+                    <input type="text" placeholder="CVV">
+                </div>
+            </section>
+
+            <!-- sản phẩm trong giỏ hàng và tổng tiền -->
+            <aside class="checkout-summary">
+
+                <!-- sản phẩm trong giỏ hàng -->
+                <div class="your-purchases">
+                    <h3>Your purchases <span style="font-size:12px;color:gray;">Edit</span></h3>
+                    
+                    <!-- sản phẩm -->
+                    <div class="cart-item">
+                        <div class="item-info">
+                            <img src="image/test.png" alt="Product">
+                            <div class="item-text">
+                                <strong>Name</strong>
+                                <span>Attribute</span>
+                            </div>
+                        </div>
+                        <span>1</span>
+                        <span>$1</span>
+                        <button class="remove-btn">X</button>
+                    </div>
+
+                    <!-- sản phẩm -->
+                    <div class="cart-item">
+                        <div class="item-info">
+                            <img src="image/test.png" alt="Product">
+                            <div class="item-text">
+                                <strong>Name</strong>
+                                <span>Attribute</span>
+                            </div>
+                        </div>
+                        <span>1</span>
+                        <span>$1</span>
+                        <button class="remove-btn">X</button>
+                    </div>
+
+                    <!-- sản phẩm -->
+                    <div class="cart-item">
+                        <div class="item-info">
+                            <img src="image/test.png" alt="Product">
+                            <div class="item-text">
+                                <strong>Name</strong>
+                                <span>Attribute</span>
+                            </div>
+                        </div>
+                        <span>1</span>
+                        <span>$1</span>
+                        <button class="remove-btn">X</button>
+                    </div>  
+                </div>
+
+                <!-- tính tổng tiền -->
+                <div class="order-summary">
+                    <h3>Order summary</h3>
+                    <div class="summary-row"><span>Subtotal</span><span>$3</span></div>
+                    <div class="summary-row"><span>Shipping</span><span>$1</span></div>
+                    <div class="summary-row"><span>Discount</span><span>-$1</span></div>
+                    <div class="summary-row total"><span>Total</span><span>$3</span></div>
+                    <button class="checkout-btn">PROCEED TO CHECKOUT</button>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="footer-content">Footer</footer>
+    </body>
+</html>
