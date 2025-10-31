@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel = 'stylesheet' href = 'Layout.css'>
+  </style>
+</head>
+<body>
+  <header class="rectangle-div">
+    <div class="tnlogo-website">LOGO WEBSITE</div>
+    <nav class="navigation-bar">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="login-signup">LOGIN</div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>USERNAME</h3>
+      <a class="menu-item" id="myAccountBtn" style="color:#d32f2f;font-weight:600;">My Account</a>
+      <div class="submenu" id="myAccountSub">
+        <a class="sub-item" data-section="profile">Profile</a>
+        <a class="sub-item" data-section="address">Address</a>
+      </div>
+      <a class="menu-item" href="Personal Information.html">Personal Information</a>
+      <a class="menu-item" href="Order Details.html">Order Details</a>
+    </aside>
+
+    <main class="main-content">
+      <!-- Profile -->
+      <section class="section active" id="profile">
+        <h2>Profile Information</h2>
+        <form>
+          <div class="form-row">
+            <label><strong>Username</strong></label>
+            <input type="text" placeholder="Username">
+          </div>
+          <div class="form-row">
+            <label><strong>Display Name</strong></label>
+            <input type="text" placeholder="Display name">
+          </div>
+          <div class="form-row">
+            <label><strong>Email</strong></label>
+            <input type="email" placeholder="example@gmail.com">
+          </div>
+          <div class="form-row">
+            <label><strong>Phone Number</strong></label>
+            <input type="text" placeholder="0123456789">
+          </div>
+          <div class="form-row">
+            <label><strong>Gender</strong></label>
+            <div class="gender-group">
+              <label><input type="radio" name="gender" value="Nam"> Male</label>
+              <label><input type="radio" name="gender" value="Nữ"> Female</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <label><strong>Date of Birth</strong></label>
+            <input type="date">
+          </div>
+          <button class="save-btn">Save</button>
+        </form>
+      </section>
+
+      <!-- Address -->
+      <section class="section" id="address">
+        <div class="address-header">
+          <h2>My Addresses</h2>
+          <span class="add-address">+ Add New Address</span>
+        </div>
+
+        <div class="address-list">
+          <div class="address-box">
+            <p><strong>Địa chỉ:</strong> 123 Nguyễn Văn Cừ, Quận 5, TP.HCM <span class="default-label" style="color:#d32f2f; font-weight:600;"></span></p>
+            <div class="address-actions">
+              <button class="update-btn">Update</button>
+              <button class="default-btn">Set Default</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <footer>
+    <div class="footer-title">Follow Us</div>
+    <div class="social-links">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="22" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="22" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" width="22" alt="Tiktok"></a>
+    </div>
+    <p style="margin-top:12px; color:#555;">📞 <a href="tel:0123456789">0123 456 789</a> | ✉️ <a href="mailto:lienhe@shoptho.vn">lienhe@shoptho.vn</a></p>
+    <p style="margin-top:8px; color:#666;">© 2025 ShopThơ. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle submenu
+    const myAccountBtn = document.getElementById("myAccountBtn");
+    const myAccountSub = document.getElementById("myAccountSub");
+    myAccountBtn.addEventListener("click", () => {
+      myAccountSub.style.display = myAccountSub.style.display === "block" ? "none" : "block";
+    });
+
+    // Switch sections
+    const subItems = document.querySelectorAll(".sub-item");
+    const sections = document.querySelectorAll(".section");
+    subItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const target = item.dataset.section;
+        sections.forEach(sec => sec.classList.remove("active"));
+        document.getElementById(target).classList.add("active");
+      });
+    });
+
+    // Address features
+    const addressList = document.querySelector(".address-list");
+    const addAddressBtn = document.querySelector(".add-address");
+
+    addAddressBtn.addEventListener("click", () => {
+      const newAddress = prompt("Nhập địa chỉ mới:");
+      if (newAddress && newAddress.trim() !== "") {
+        const box = document.createElement("div");
+        box.classList.add("address-box");
+        box.innerHTML = `
+          <p><strong>Địa chỉ:</strong> ${newAddress} <span class="default-label" style="color:#d32f2f; font-weight:600;"></span></p>
+          <div class="address-actions">
+            <button class="update-btn">Update</button>
+            <button class="default-btn">Set Default</button>
+          </div>`;
+        addressList.appendChild(box);
+        attachDefaultButtonHandler(box);
+      }
+    });
+
+    // Function: set default
+    function attachDefaultButtonHandler(box) {
+      const btn = box.querySelector(".default-btn");
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".default-label").forEach(label => label.textContent = "");
+        const label = box.querySelector(".default-label");
+        label.textContent = "(Mặc định)";
+      });
+    }
+
+    // Initialize for existing addresses
+    document.querySelectorAll(".address-box").forEach(box => attachDefaultButtonHandler(box));
+  </script>
+</body>
+</html>

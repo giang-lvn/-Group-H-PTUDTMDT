@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel = 'stylesheet' href = 'layout_orders.css'>
+
+</head>
+<body>
+  <header class="rectangle-div">
+    <div class="tnlogo-website" onclick="window.location.href='index.html'">LOGO WEBSITE</div>
+    <nav class="navigation-bar">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="login-signup">LOGIN</div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>USERNAME</h3>
+      <a class="menu-item" href="Account.html">My Account</a>
+      <a class="menu-item" href="Personal Information.html" >Personal Information</a>
+      <a class="menu-item" href="Order Details.html" style = 'color:#d32f2f;font-weight:600;'>Order Details</a>
+    </aside>
+
+    <main class="main-content">
+      <section class="section">
+        <h2>Order Details</h2>
+        <p style="margin-bottom:20px;color:#555;">Here you can view the status of your recent orders.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="orderTableBody">
+            <tr>
+              <td>#1001</td>
+              <td>2025-10-10</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>₫1,200,000</td>
+              <td>
+                <button class="action-btn view-btn">View</button>
+                <button class="action-btn cancel-btn">Cancel</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#1002</td>
+              <td>2025-10-15</td>
+              <td><span class="status shipped">Shipped</span></td>
+              <td>₫850,000</td>
+              <td>
+                <button class="action-btn view-btn">View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#1003</td>
+              <td>2025-09-25</td>
+              <td><span class="status delivered">Delivered</span></td>
+              <td>₫2,450,000</td>
+              <td>
+                <button class="action-btn view-btn">View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-title">Follow Us</div>
+    <div class="social-links">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="22" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="22" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" width="22" alt="Tiktok"></a>
+    </div>
+    <p style="margin-top:12px; color:#555;">📞 <a href="tel:0123456789">0123 456 789</a> | ✉️ <a href="mailto:lienhe@shoptho.vn">lienhe@shoptho.vn</a></p>
+    <p style="margin-top:8px; color:#666;">© 2025 ShopThơ. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Cancel button handler
+    document.querySelectorAll('.cancel-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (confirm('Are you sure you want to cancel this order?')) {
+          btn.closest('tr').querySelector('.status').textContent = 'Cancelled';
+          btn.closest('tr').querySelector('.status').className = 'status cancelled';
+          btn.remove(); // remove cancel button after cancelling
+        }
+      });
+    });
+  </script>
+</body>
+</html>

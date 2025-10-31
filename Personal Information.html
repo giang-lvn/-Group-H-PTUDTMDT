@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Information</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel = 'stylesheet' href = 'Layout.css'>
+</head>
+<body>
+  <header class="rectangle-div">
+    <div class="tnlogo-website">LOGO WEBSITE</div>
+    <nav class="navigation-bar">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="login-signup">LOGIN</div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>USERNAME</h3>
+      <a class="menu-item" href="Account.html">My Account</a>
+      <a class="menu-item" href="Personal Information.html" style="color:#d32f2f;font-weight:600;">Personal Information</a>
+      <a class="menu-item" href="Order Details.html">Order Details</a>
+    </aside>
+
+    <main class="main">
+      <h2>Personal Information</h2>
+      <p class="desc">Make sure that all your information is legitimate.</p>
+      <form id="personalForm">
+        <div class="form-row">
+          <label>Full Name</label>
+          <input type="text" id="fullname" placeholder="Nguyen Van A">
+        </div>
+        <div class="form-row">
+          <label>Country</label>
+          <input type="text" id="country" placeholder="Vietnam">
+        </div>
+        <div class="form-row">
+          <label>City/Province</label>
+          <input type="text" id="city" placeholder="Ho Chi Minh City">
+        </div>
+        <button type="button" class="save-btn" id="saveBtn">Save Information</button>
+      </form>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-title">Follow Us</div>
+    <div class="social-links">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="22" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="22" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" width="22" alt="Tiktok"></a>
+    </div>
+    <p style="margin-top:12px; color:#555;">📞 <a href="tel:0123456789">0123 456 789</a> | ✉️ <a href="mailto:lienhe@shoptho.vn">lienhe@shoptho.vn</a></p>
+    <p style="margin-top:8px; color:#666;">© 2025 ShopThơ. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const fullNameInput = document.getElementById('fullname');
+    const countryInput = document.getElementById('country');
+    const cityInput = document.getElementById('city');
+    const saveBtn = document.getElementById('saveBtn');
+
+    // Load data from localStorage when page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedData = JSON.parse(localStorage.getItem('personalInfo'));
+      if (savedData) {
+        fullNameInput.value = savedData.fullname || '';
+        countryInput.value = savedData.country || '';
+        cityInput.value = savedData.city || '';
+      }
+    });
+
+    // Save data when button clicked
+    saveBtn.addEventListener('click', () => {
+      const info = {
+        fullname: fullNameInput.value.trim(),
+        country: countryInput.value.trim(),
+        city: cityInput.value.trim()
+      };
+
+      if (!info.fullname || !info.country || !info.city) {
+        alert("Please fill out all fields before saving.");
+        return;
+      }
+
+      localStorage.setItem('personalInfo', JSON.stringify(info));
+      alert("Your information has been saved successfully!");
+    });
+  </script>
+</body>
+</html>

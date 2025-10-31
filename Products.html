@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel = 'stylesheet' href = 'layout_product.css'>
+</head>
+<body>
+  <header class="rectangle-div">
+    <div class="tnlogo-website" onclick="window.location.href='index.html'">LOGO WEBSITE</div>
+    <nav class="navigation-bar">
+      <a href="#">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="login-signup">LOGIN</div>
+  </header>
+
+  <div class="container">
+    <section class="product-container">
+      <div class="product-image">Product Image
+      </div>
+      <div class="product-details">
+        <h2>Product Name</h2>
+        <div class="price">₫599,000</div>
+
+        <div class="quantity">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" value="1" min="1" />
+        </div>
+
+        <button class="add-cart">Add to Cart</button>
+
+        <p class="desc" style = 'font-style: italic;'>Product Description: High-quality, multi-purposed product</p>
+      </div>
+    </section>
+
+    <section class="related-products">
+      <div class="related-header">
+        <h3>Related Products</h3>
+        <button style="background:none;border:none;color:#d32f2f;cursor:pointer;font-weight:600;">See more +</button>
+      </div>
+      <div class="related-list">
+        <div class="related-item">Product 1</div>
+        <div class="related-item">Product 2</div>
+        <div class="related-item">Product 3</div>
+      </div>
+    </section>
+
+    <section class="feedback-section">
+      <h3>Customer Feedbacks</h3>
+      <ul class="feedback-list">
+        <li class="feedback-item">⭐️⭐️⭐️⭐️⭐️ - The product exceeded my expectations regarding quality and services</li>
+        <li class="feedback-item">⭐️⭐️⭐️⭐️ - Colorful and authentic </li>
+        <li class="feedback-item">⭐️⭐️⭐️ - Good, but the delivery speed is quite slow </li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-title">Follow Us</div>
+    <div class="social-links">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="22" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="22" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" width="22" alt="Tiktok"></a>
+    </div>
+    <p style="margin-top:12px; color:#555;">📞 <a href="tel:0123456789">0123 456 789</a> | ✉️ <a href="mailto:lienhe@shoptho.vn">lienhe@shoptho.vn</a></p>
+    <p style="margin-top:8px; color:#666;">© 2025 ShopThơ. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Thêm vào giỏ hàng
+    document.querySelector('.add-cart').addEventListener('click', () => {
+      const qty = document.getElementById('quantity').value;
+      alert(`Added ${qty} items in the cart!`);
+    });
+  </script>
+</body>
+</html>
