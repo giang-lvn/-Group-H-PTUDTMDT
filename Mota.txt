@@ -1,0 +1,31 @@
+Đề tài: Website thương mại điện tử bán bánh kẹo
+
+Trang: 
+Landing page: có các nội dung bao gồm giới thiệu những nét nổi bật về doanh nghiệp, các danh mục sản phẩm nổi bật, feedback của khách hàng
+About us: giới thiệu về câu chuyện của doanh nghiệp, các cột mốc lịch sử của doanh nghiệp, đội ngũ nhân sự và phần đăng kí nhận thông tin ưu đãi, sản phẩm
+Account: Giúp người dùng quản lý thông tin cá nhân, cập nhật hồ sơ, địa chỉ nhận hàng và xem chi tiết đơn hàng đã đặt. Gồm các chức năng chính:
+- Thông tin cá nhân (Personal Information): Hiển thị và cho phép chỉnh sửa họ tên, quốc gia, thành phố, hoặc thông tin cơ bản khác của người dùng. Có nút Save để lưu thay đổi.
+- Địa chỉ (Address): Cho phép thêm, chỉnh sửa và đặt địa chỉ mặc định khi giao hàng.
+- Chi tiết đơn hàng (Order details): Hiển thị danh sách đơn hàng đã đặt, trạng thái giao hàng, mã đơn và thông tin thanh toán cơ bản.
+- Thanh điều hướng (Sidebar): Dẫn đến các mục: Hồ sơ, Địa chỉ, Thông tin cá nhân, Đơn hàng, giúp thao tác nhanh và rõ ràng.
+Login/Sign up : bao gồm 2 trang
+- Trang login: là form đăng nhập với tên người dùng/email/sđt, ngoài ra còn phương pháp đăng nhập khác như đăng nhập bằng Facebook và Google. ngoài ra còn background (định hướng sẽ thêm hiệu ứng cho nổi phần hộp đăng nhập hơn)
+- Trang sign up: layout tương tự như trang login nhưng sẽ có thêm phần xác nhận lại mật khẩu và mục điền số điện thoại và có thể xác nhận bằng cách gửi SMS. Ngoài ra, người dùng vẫn có thể đăng kí bằng facebook và google nhưng có thể thiết lập số điện thoại trong trang My account.
+Policy: gồm các chính sách và điều khoản khi sử dụng website và đặt hàng. Ngoài ra còn có mục FAQs (câu hỏi thường gặp) để hỗ trợ giải đáp cho khách hàng
+Shop: Trong shop sẽ hiển thị tất cả sản phẩm theo layout grid 3X2 và có thể chuyển trang, ngoài ra còn có search bar và các tag để sau này có thể dùng để lọc các sản phẩm theo tag, dưới trang shop ngoài footer còn có đăng kí newsletter dạng subscription
+Product (feedback, related products): Giúp người dùng xem chi tiết sản phẩm, hình ảnh, giá bán, và thêm sản phẩm vào giỏ hàng. Các chức năng chính:
+- Hiển thị hình ảnh sản phẩm: Khu vực chính của trang, hiển thị ảnh từ thư mục hoặc link trực tiếp.
+- Thông tin sản phẩm: Bao gồm tên, giá, mô tả, và số lượng.
+- Thêm vào giỏ hàng (Add to Cart): Nút thao tác nhanh để đưa sản phẩm vào giỏ hàng (mô phỏng chức năng thực tế).
+- Sản phẩm liên quan (Related products): Gợi ý các sản phẩm tương tự để tăng khả năng mua sắm.
+- Feedback khách hàng (Customer Feedbacks): Khu vực để khách hàng gửi đánh giá sau khi mua hàng.
+Cart: trang hiển thị những sản phẩm khách hàng đã bỏ vào giỏ hàng (thumbnail, tên sản phẩm, thuộc tính, đơn giá, số lượng). Các chức năng trong trang:
+- Quản lý giỏ hàng: thay đổi số lượng sản phẩm, xóa sản phẩm, lưu thông tin giỏ hàng (khi khách hàng đã đăng nhập tài khoản)
+- Nhập mã giảm giá
+- Tính toán: Tổng tiền tạm tính, phí vận chuyển, giảm giá, tổng tiền
+Checkout: trang cho phép người dùng nhập thông tin và thanh toán đơn hàng. Các chức năng trong trang:
+- Điền thông tin: thông tin cá nhân, địa chỉ, thông tin thanh toán
+- Lựa chọn phương thức thanh toán
+- Xác nhận đặt hàng
+
+Ngoài các trang với chức năng cơ bản trên, nhóm dự định sẽ tích hợp chatbot AI để hỗ trợ khách hàng 24/7.
